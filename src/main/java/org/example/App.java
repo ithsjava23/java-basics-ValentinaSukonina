@@ -83,8 +83,9 @@ public class App {
                         }
                     }
                     if (choice.equals("4")) {
-                        // Find 4 continuous hours with cheapest total price of electricity
-}
-            }while (!choice.equalsIgnoreCase("e"));
+                        // Find 4 continuous hours with cheapest average price of electricity
+                        System.out.print("You choose option 4\n");
+                        }
+            } while (!choice.equalsIgnoreCase("e"));
         }
 }
