@@ -19,9 +19,7 @@ public class App {
             int maxPrice = 0;
             int positionMax = 0;
             double meanPrice = 0;
-            double min4h;
-            int mean4Start = 0;
-            float mean4h = 0;
+
 
             // fill "pricePerHour" array with hours and array for timeTable with formatted hours string
             for (int i = 0; i < 24; i++) {
@@ -85,35 +83,8 @@ public class App {
                         }
                     }
                     if (choice.equals("4")) {
-                        System.out.print("You chose option 4\n");
-                    }
-
+                        // Find 4 continuous hours with cheapest total price of electricity
+}
             }while (!choice.equalsIgnoreCase("e"));
         }
-        }
-/*-----------------*/
-//        // Use a switch statement to execute corresponding method
-//        //Code for choices 1-4
-//            switch (choice) {
-//                case "1":
-//                    // Perform the action for option 1
-//                    System.out.print("You chose option 1\n");
-//                    break;
-//                case "2":
-//                    // Perform the action for option 2
-//                    System.out.print("You chose option 2\n");
-//                    break;
-//                case "3":
-//                    // Perform the action for option 3
-//                    System.out.print("You chose option 3\n");
-//                    break;
-//                case "4":
-//                    // Perform the action for option 4
-//                    System.out.print("You chose option 4\n");
-//                    break;
-//        } while(!choice.equalsIgnoreCase("e")) {
-//                ;
-//            }
-
-
-
+}
