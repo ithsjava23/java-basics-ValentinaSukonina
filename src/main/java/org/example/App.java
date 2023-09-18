@@ -7,14 +7,10 @@ import java.util.Scanner;
 public class App {
         /*-----------------*/
         public static void main(String[] args) {
-            /*Locale swedishLocale = new Locale("sw", "SE");
-            Locale.setDefault(swedishLocale);*/
             Locale.setDefault(new Locale("sv", "SE"));
 
             // Create a scanner object for user input and 2 empty arrays
             Scanner scanner = new Scanner(System.in);
-            int[] price = new int[24]; // array for price input
-            int[] hours = new int[24]; // array for hours (as index for price input
             String[] timeTable = new String[24]; //array for formatted time
             int[][] pricePerHour = new int[24][2]; //2D array with prices and hours as index
             int hour;
@@ -27,14 +23,11 @@ public class App {
             int mean4Start = 0;
             float mean4h = 0;
 
-
             // fill "pricePerHour" array with hours and array for timeTable with formatted hours string
-            for (int i = 0; i < hours.length; i++) {
-                hours[i] = i;
+            for (int i = 0; i < 24; i++) {
                 timeTable[i] = String.format("%02d-%02d", i, i + 1);
                 pricePerHour[i][1] = i;
             }
-
                 String choice;
                 do {
                     String menu = """
