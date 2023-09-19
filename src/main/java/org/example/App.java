@@ -92,7 +92,6 @@ public class App {
             }
             if (choice.equals("4")) {
                 // Find 4 cheapest hours
-                    /*
                         for (int i = 0; i < pricePerHour.length - 3; i++) {
                             int sum = 0;
                             for (int j = i; j < i + 4; j++) {
@@ -108,7 +107,7 @@ public class App {
                         df.setDecimalSeparatorAlwaysShown(true);
                         averString = df.format(averPrice).replace(".", ",");
 
-                        System.out.print("Påbörja laddning klockan " + start4h + "\nMedelpris 4h: " + averString + " öre/kWh\n");*/
+                        System.out.print("Påbörja laddning klockan " + start4h + "\nMedelpris 4h: " + averString + " öre/kWh\n");
                         }
 
 
