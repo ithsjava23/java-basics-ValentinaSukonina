@@ -53,42 +53,42 @@ public class App {
                 }
             }
             if (choice.equals("2")) {
-                        for (int i = 0; i < pricePerHour.length; i++) {
-                            if (i == 0) {
-                                minPrice = pricePerHour[i][0];
-                                positionMin = i;
-                                maxPrice = pricePerHour[i][0];
-                                positionMax = i;
-                            }
-                            if (pricePerHour[i][0] < minPrice) {
-                                minPrice = pricePerHour[i][0];
-                                positionMin = i;
-                            }
-                            if (pricePerHour[i][0] > maxPrice) {
-                                maxPrice = pricePerHour[i][0];
-                                positionMax = i;
-                            }
-                            //meanPrice = meanPrice + pricePerHour[i][0];
-                            meanPrice += pricePerHour[i][0];
-                        }
-                        meanPrice = meanPrice / 24;
-
-                        System.out.print("Lägsta pris: " + timeTable[positionMin] + ", " + minPrice + " öre/kWh\n");
-                        System.out.print("Högsta pris: " + timeTable[positionMax] + ", " + maxPrice + " öre/kWh\n");
-                        System.out.print("Medelpris: " + String.format("%.02f", meanPrice) + " öre/kWh\n");
-
-
+//                        for (int i = 0; i < pricePerHour.length; i++) {
+//                            if (i == 0) {
+//                                minPrice = pricePerHour[i][0];
+//                                positionMin = i;
+//                                maxPrice = pricePerHour[i][0];
+//                                positionMax = i;
+//                            }
+//                            if (pricePerHour[i][0] < minPrice) {
+//                                minPrice = pricePerHour[i][0];
+//                                positionMin = i;
+//                            }
+//                            if (pricePerHour[i][0] > maxPrice) {
+//                                maxPrice = pricePerHour[i][0];
+//                                positionMax = i;
+//                            }
+//                            //meanPrice = meanPrice + pricePerHour[i][0];
+//                            meanPrice += pricePerHour[i][0];
+//                        }
+//                        meanPrice = meanPrice / 24;
+//
+//                        System.out.print("Lägsta pris: " + timeTable[positionMin] + ", " + minPrice + " öre/kWh\n");
+//                        System.out.print("Högsta pris: " + timeTable[positionMax] + ", " + maxPrice + " öre/kWh\n");
+//                        System.out.print("Medelpris: " + String.format("%.02f", meanPrice) + " öre/kWh\n");
             }
-            if (choice.equals("3")) {
-                    /*    // Make a copy of the original 2d array "PricePerHour"
-                        int[][] copyPricePerHour = Arrays.copyOf(pricePerHour, pricePerHour.length);
 
-                        // Sort the copy of Array by the first column using a lambda expression
-                        Arrays.sort(copyPricePerHour, (int[] a, int[] b) -> Integer.compare(b[0], a[0]));
-                        for (int i = 0; i < copyPricePerHour.length; i++) {
-                            hour = copyPricePerHour[i][1];
-                            System.out.print(timeTable[hour] + " " + copyPricePerHour[i][0] + " öre\n");
-                        } */
+
+            if (choice.equals("3")) {
+//                      // Make a copy of the original 2d array "PricePerHour"
+//                        int[][] copyPricePerHour = Arrays.copyOf(pricePerHour, pricePerHour.length);
+//
+//                        // Sort the copy of Array by the first column using a lambda expression
+//                        Arrays.sort(copyPricePerHour, (int[] a, int[] b) -> Integer.compare(b[0], a[0]));
+//                        for (int i = 0; i < copyPricePerHour.length; i++) {
+//                            hour = copyPricePerHour[i][1];
+//                            System.out.print(timeTable[hour] + " " + copyPricePerHour[i][0] + " öre\n");
+//                        }
             }
             if (choice.equals("4")) {
                 // Find 4 cheapest hours
