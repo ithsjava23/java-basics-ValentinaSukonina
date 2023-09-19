@@ -1,5 +1,6 @@
 package org.example;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
@@ -7,7 +8,9 @@ import java.util.Scanner;
 public class App {
         /*-----------------*/
         public static void main(String[] args) {
-            Locale.setDefault(new Locale("sv", "SE"));
+            //Locale.setDefault(new Locale("sv", "SE"));
+            Locale swedishLocale = new Locale("sv", "SE");
+            Locale.setDefault(swedishLocale);
 
             // Create a scanner object for user input and 2 empty arrays
             Scanner scanner = new Scanner(System.in);
@@ -19,6 +22,10 @@ public class App {
             int maxPrice = 0;
             int positionMax = 0;
             double meanPrice = 0;
+            int min4h = Integer.MAX_VALUE;
+            //int min4h = 0;
+            int start4h = 0;
+            String averString;
 
 
             // fill "pricePerHour" array with hours and array for timeTable with formatted hours string
@@ -83,9 +90,28 @@ public class App {
                         }
                     }
                     if (choice.equals("4")) {
-                        // Find 4 continuous hours with cheapest average price of electricity
-                        System.out.print("You choose option 4\n");
+                        // Find 4 cheapest hours
+                    /*    int min4h = Integer.MAX_VALUE;
+                        int start4h = 0;
+                        String averString; */
+                        for (int i = 0; i < pricePerHour.length - 3; i++) {
+                            int sum = 0;
+                            for (int j = i; j < i + 4; j++) {
+                                sum = pricePerHour[j][0] + sum;
+                            }
+                            if (sum < min4h) {
+                                min4h = sum;
+                                start4h = i;
+                            }
                         }
+                        float averPrice = min4h / 4f;
+                        DecimalFormat df = new DecimalFormat("0.0");
+                        df.setDecimalSeparatorAlwaysShown(true);
+                        averString = df.format(averPrice).replace(".", ",");
+
+                        System.out.print("Påbörja laddning klockan " + start4h + "\nMedelpris 4h: " + averString + " öre/kWh\n");}
+
+
             } while (!choice.equalsIgnoreCase("e"));
         }
 }
