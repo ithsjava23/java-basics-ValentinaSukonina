@@ -24,10 +24,10 @@ public class App {
         int positionMax = 0;
         //double meanPrice = 0;
         float meanPrice = 0;
-        int total = 0;
+        //int total = 0;
         int min4h = Integer.MAX_VALUE;
         int start4h = 0;
-        String averString;
+        String averFormated;
 
 
         // fill "pricePerHour" array with hours and array for timeTable with formatted hours string
@@ -56,8 +56,10 @@ public class App {
                 }
             }
             if (choice.equals("2")) {
+                int total = 0;
                 for (int i = 0; i < pricePerHour.length; i++) {
                     total += pricePerHour[i][0];
+
                     //meanPrice += pricePerHour[i][0];
                     if (i == 0) {
                         minPrice = pricePerHour[i][0];
@@ -73,8 +75,6 @@ public class App {
                         maxPrice = pricePerHour[i][0];
                         positionMax = i;
                     }
-                    //meanPrice = meanPrice + pricePerHour[i][0];
-                    //meanPrice += pricePerHour[i][0];
                 }
                 meanPrice = (float) total / 24;
 
@@ -94,10 +94,7 @@ public class App {
                 }
             }
             if (choice.equals("4")) {
-                // Find 4 cheapest hours
-                    /*    int min4h = Integer.MAX_VALUE;
-                        int start4h = 0;
-                        String averString; */
+
                 for (int i = 0; i < pricePerHour.length - 3; i++) {
                     int sum = 0;
                     for (int j = i; j < i + 4; j++) {
@@ -111,9 +108,9 @@ public class App {
                 float averPrice = min4h / 4f;
                 DecimalFormat df = new DecimalFormat("0.0");
                 df.setDecimalSeparatorAlwaysShown(true);
-                averString = df.format(averPrice).replace(".", ",");
+                averFormated = df.format(averPrice).replace(".", ",");
 
-                System.out.print("Påbörja laddning klockan " + start4h + "\nMedelpris 4h: " + averString + " öre/kWh\n");}
+                System.out.print("Påbörja laddning klockan " + start4h + "\nMedelpris 4h: " + averFormated + " öre/kWh\n");}
 
 
         } while (!choice.equalsIgnoreCase("e"));
