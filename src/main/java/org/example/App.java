@@ -53,7 +53,7 @@ public class App {
                 }
             }
             if (choice.equals("2")) {
-                        /*for (int i = 0; i < pricePerHour.length; i++) {
+                        for (int i = 0; i < pricePerHour.length; i++) {
                             if (i == 0) {
                                 minPrice = pricePerHour[i][0];
                                 positionMin = i;
@@ -76,7 +76,7 @@ public class App {
                         System.out.print("Lägsta pris: " + timeTable[positionMin] + ", " + minPrice + " öre/kWh\n");
                         System.out.print("Högsta pris: " + timeTable[positionMax] + ", " + maxPrice + " öre/kWh\n");
                         System.out.print("Medelpris: " + String.format("%.02f", meanPrice) + " öre/kWh\n");
-                        */
+
 
             }
             if (choice.equals("3")) {
