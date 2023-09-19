@@ -22,7 +22,9 @@ public class App {
         int positionMin = 0;
         int maxPrice = 0;
         int positionMax = 0;
-        double meanPrice = 0;
+        //double meanPrice = 0;
+        float meanPrice = 0;
+        int total = 0;
         int min4h = Integer.MAX_VALUE;
         int start4h = 0;
         String averString;
@@ -55,6 +57,8 @@ public class App {
             }
             if (choice.equals("2")) {
                 for (int i = 0; i < pricePerHour.length; i++) {
+                    total += pricePerHour[i][0];
+                    //meanPrice += pricePerHour[i][0];
                     if (i == 0) {
                         minPrice = pricePerHour[i][0];
                         positionMin = i;
@@ -70,9 +74,9 @@ public class App {
                         positionMax = i;
                     }
                     //meanPrice = meanPrice + pricePerHour[i][0];
-                    meanPrice += pricePerHour[i][0];
+                    //meanPrice += pricePerHour[i][0];
                 }
-                meanPrice = meanPrice / 24;
+                meanPrice = (float) total / 24;
 
                 System.out.print("Lägsta pris: " + timeTable[positionMin] + ", " + minPrice + " öre/kWh\n");
                 System.out.print("Högsta pris: " + timeTable[positionMax] + ", " + maxPrice + " öre/kWh\n");
