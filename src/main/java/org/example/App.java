@@ -17,7 +17,7 @@ public class App {
         String[] timeTable = new String[24]; //array for formatted time
         int[][] pricePerHour = new int[24][2]; //2D array with prices and hours as index
         int hour;
-        float meanPrice = 0;
+        float meanPrice;
         int min4h = Integer.MAX_VALUE;
         int start4h = 0;
 
